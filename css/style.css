@@ -1,0 +1,127 @@
+/* stili generali */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat";
+    /* border: 10px solid red; */
+}
+
+/* stili attributi */
+
+
+
+
+/* first Large */
+
+/* stili struttura */
+
+.wrapper-up{
+    display: flex;
+    height:calc(100vh - 10px) ;
+    /* debug rules */
+    border: 1px solid red;
+    background-color: greenyellow;
+
+}
+
+.controller{
+    display: flex;
+    height: 100px;
+    background-color: black;
+}
+
+.sidebar{
+    width: 150px;
+    height: 100%;
+    background-color: red;
+}
+
+.main-content{
+    flex-grow: 1;
+    background-color: blue;
+
+}
+
+.topbar{
+    background-color:#080b12;
+    width: calc(100% - 150px);
+    /* debug rules */
+    display: flex;
+    height:100px;
+    position: fixed;
+}
+
+.container{
+    height:calc(100% - 100px);
+    color: white;
+    margin-top: 100px;
+    width: 100%;
+    background-color: #141922;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+
+/* stili sidebar */
+
+
+
+/* stili main-content */
+
+/* topbar */
+.button{
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 8px;
+    margin: auto 10px;
+    margin-left: auto; 
+}
+
+
+
+
+
+
+/* stili controller */
+
+.controller-section{
+    height: 100%;
+    width: calc(100% * 1/3);
+    /* debug rules */
+    border: 1px solid white;
+}
+
+
+
+
+/* versione md */
+@media all and (max-width: 878px){}
+
+
+
+
+/* versione s */
+@media all and (max-width: 639px){}
+
+
+
+
+
+
+/* versione xs */
+@media all and (max-width: 552px){
+    .sidebar{
+        width: 50px;
+    }
+
+    .topbar{
+        width: calc(100% - 50px);
+    }
+}
+
+

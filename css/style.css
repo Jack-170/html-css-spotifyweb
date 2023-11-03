@@ -11,8 +11,16 @@ body{
     /* border: 10px solid red; */
 }
 
-/* stili attributi */
+h1{
+    display: inline-block;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
 
+/* stili attributi */
+.white{
+    color: white;
+}
 
 
 
@@ -36,9 +44,12 @@ body{
 }
 
 .sidebar{
-    width: 150px;
+    color: #6a6a6a;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
     height: 100%;
-    background-color: red;
+    background-color: black;
 }
 
 .main-content{
@@ -49,30 +60,124 @@ body{
 
 .topbar{
     background-color:#080b12;
-    width: calc(100% - 150px);
+    width: calc(100% - 200px);
     /* debug rules */
     display: flex;
     height:100px;
     position: fixed;
 }
 
-.container{
+.main-container{
     height:calc(100% - 100px);
     color: white;
     margin-top: 100px;
     width: 100%;
     background-color: #141922;
+    /* debug rules */
     border: 1px solid rgb(255, 255, 255);
 }
 
 
 /* stili sidebar */
+.sidebar-container{
+    width: 85%;
+    margin: 20px auto 5px;
+    /* debug rules */
+    border: 1px solid black;
+}
+
+.sidebar-mid-container{
+    width: 85%;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.sidebar-bottom-container{
+    width: 85%;
+    margin: auto;
+    margin-bottom:0;
+    /* debug rules */
+    /* border: 1px solid white; */
+}
+
+ul,ol{
+    list-style-type: none;
+}
+
+li{
+    font-size: 14px;
+    margin: 15px auto;
+}
+
+.fa-brands.fa-spotify{
+    font-size: 35px;
+}
+
+.fa-solid.fa-square-plus{
+    font-size: 35px;
+    color: #a3a3a3;
+    margin-bottom: 0;
+}
+
+.new-playlist{
+    display: flex;
+    align-items:center;
+    margin-top: 10px;
+}
+
+
+
+.new-playlist-container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+a{
+    color: grey;
+    text-decoration: none;
+}
+
+hr{
+    margin:5px auto;
+}
+
+.box-profile{
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 80%;
+    margin-right: 5px;
+
+}
+
+.profile-img{
+  width: 100%;
+  height: 80%;
+}
+
+.flex{
+    justify-content: start;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+
 
 
 
 /* stili main-content */
+.container{
+    width: 95%;
+    height: 100%;
+    border: 1px solid white;
+    margin: 0 auto;
+}
 
-/* topbar */
+
+
+
+/*stili topbar */
 .button{
     color: white;
     border: 1px solid white;
@@ -81,6 +186,8 @@ body{
     margin: auto 10px;
     margin-left: auto; 
 }
+
+
 
 
 

@@ -217,9 +217,14 @@ hr{
 
 .box-img-col{
     position: relative;
-    display: inline-block; /* Consente di adattare il contenitore all'immagine */
+    display: inline-block; 
 }
 
+.col-img-circle{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
 .col-icon{
   color: white;
   font-size: 70px;

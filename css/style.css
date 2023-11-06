@@ -23,44 +23,44 @@ h1{
 }
 
 
-
 /* first Large */
 
 /* stili struttura */
 
 .wrapper-up{
     display: flex;
-    height:calc(100vh - 10px) ;
+    height:calc(100vh - 100px) ;
     /* debug rules */
-    border: 1px solid red;
+    /* border: 1px solid red; */
     background-color: greenyellow;
 
 }
 
-.controller{
+.controller-container{
     display: flex;
     height: 100px;
-    background-color: black;
+    background-color: #282828;
 }
 
 .sidebar{
     color: #6a6a6a;
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 175px;
     height: 100%;
     background-color: black;
 }
 
 .main-content{
-    flex-grow: 1;
+    width:calc(100vw - 175px); 
+    
     background-color: blue;
-
+    overflow: auto;
 }
 
-.topbar{
+.topbar-fixed{
     background-color:#080b12;
-    width: calc(100% - 200px);
+    width: calc(100% - 175px);
     /* debug rules */
     display: flex;
     height:100px;
@@ -68,13 +68,14 @@ h1{
 }
 
 .main-container{
-    height:calc(100% - 100px);
+    height:100%;
     color: white;
     margin-top: 100px;
     width: 100%;
     background-color: #141922;
+    overflow: scroll;
     /* debug rules */
-    border: 1px solid rgb(255, 255, 255);
+    /* border: 1px solid rgb(255, 255, 255); */
 }
 
 
@@ -133,7 +134,7 @@ li{
 }
 
 a{
-    color: grey;
+    color:#6a6a6a;
     text-decoration: none;
 }
 
@@ -147,7 +148,6 @@ hr{
     border: 1px solid white;
     border-radius: 80%;
     margin-right: 5px;
-
 }
 
 .profile-img{
@@ -170,9 +170,85 @@ hr{
 .container{
     width: 95%;
     height: 100%;
-    border: 1px solid white;
     margin: 0 auto;
+    color:#6a6a6a ;
+    /* debug rules */
+    /* border: 1px solid white; */
 }
+
+.nav-bar{
+    width: 70%;
+    margin: 10px auto;
+    display: flex;
+    justify-content:center;
+  }
+  
+  .navbar-item {
+    flex-basis: calc(100% / 6 - 10px); 
+    margin: 0 5px;
+    font-size: 12px;
+  }
+
+.col-container{
+    margin-top: 45px;
+    width: 100%;
+    /* debug rules */
+    /* background-color: violet; */
+    
+}
+
+.row{
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    /* debug rules */
+    /* border: 1px solid white; */
+}
+
+.col{
+    height: 100%;
+    width: calc(100% * 1/6 - 10px);
+    margin-right: 10px;
+    /* debug rules */
+    font-size: 12px;
+    text-align: center;
+    /* border: 1px solid black; */
+}
+
+.box-img-col{
+    position: relative;
+    display: inline-block; /* Consente di adattare il contenitore all'immagine */
+}
+
+.col-icon{
+  color: white;
+  font-size: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+
+
+.col-img{
+    width: 100%;
+    height: 100%;
+}
+h4{
+    font-size: 14px;
+}
+
+.col h4{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.col-container h2{
+    margin-bottom: 15px;
+}
+
 
 
 
@@ -182,7 +258,7 @@ hr{
     color: white;
     border: 1px solid white;
     border-radius: 20px;
-    padding: 8px;
+    padding: 12px;
     margin: auto 10px;
     margin-left: auto; 
 }
@@ -197,37 +273,351 @@ hr{
 /* stili controller */
 
 .controller-section{
+    display: flex;
     height: 100%;
     width: calc(100% * 1/3);
+    font-size: 12px;
     /* debug rules */
-    border: 1px solid white;
+    /* border: 1px solid white; */
+}
+
+.controller{
+    display: flex;
+    align-items: center;
+    color: #747474;
+    font-size: 12px;
+    width: 100%;
+    height: 60%;
+    margin: auto;
+    /* debug rules */
+    /* border: 1px solid white; */
+}
+
+.box-img{
+    display: flex;
+    align-items:center;
+    width: 45%;
+    height: 100%;
+}
+
+.box-icon{
+    width: 55%;
+    margin: 1px solid white;
+}
+
+.box-text{
+    margin-left: 10px;
+}
+
+.controller-img{
+    height: 100%;
+}
+
+.icon{
+   font-size: 15px;
+   margin-right: 10px;
+}
+
+.end{
+    display: flex;
+    justify-content: end;
+}
+
+.volume-bar-container{
+    margin: 0 10px;
+    height: 3px;
+    width: 30%;
+    background-color: #555555;
+    border-radius: 5px;
+}
+
+.volume-bar{
+    height: 3px;
+    width: 30%;
+    background-color: #c1c1c1;
+    border-radius: 5px;
+    position: relative;
+}
+
+.volume-bar-point{
+    position: absolute;
+    top: -7px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    display: none;
+}
+
+.music-player-controller{
+    width: 50%;
+    margin: 0 auto;
+    height: 60%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    /* debug rules */
+    /* border: 1px solid white; */
+}
+
+.music-bar-controller{
+    padding: 0 5px;
+    width: 100%;
+    height: 40%;
+    color: white;
+    display: flex;
+    align-items: center;
+    /* debug rules */
+    /* border: 1px solid white; */
+}
+
+.controller-section:nth-child(2){
+    display: block;
+    height: 60%;
+    margin: auto;
+}
+
+.music-bar-controller .volume-bar-container{
+    width: 85%;
+}
+
+.music-player-controller .fa-regular.fa-circle-play{
+    font-size: 26px;
+}
+
+/* stili :hover */
+.button:hover{
+    transform: scale(110%);
+}
+
+li:hover{
+  color: white;
+}
+
+a:hover{
+    color: white;
+}
+
+.new-playlist-container:hover{
+    color: white;
+}
+
+.fa-solid.fa-square-plus:hover{
+    color: white;
+}
+
+
+.box-text span:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.box-icon:hover{
+    color: white;
+}
+
+.music-player-controller .fa-regular.fa-circle-play:hover{
+    transform: scale(120%);
+}
+
+.volume-bar:hover{
+    background-color: #affa2e;
+}
+
+.volume-bar:hover .volume-bar-point{
+    display: block;
+}
+
+.box-img-col:hover .col-icon{
+    display: block;
+}
+
+.col-img:hover{
+    opacity: 0.4;
+}
+
+
+
+/* versione md */
+@media all and (max-width: 878px){
+    
+    /* main content */
+
+    /* navbar */
+    .nav-bar{
+        width: 85%;
+        margin: 15px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-item {
+        flex-basis: calc(100% / 5 - 10px); 
+        margin: 5px 5px;
+        font-size: 10px;
+    }
+
+    .new-line{
+        margin: 20px auto 0;
+    }
+
+   
+    /* col-container */
+   .col{
+    width: calc(100% * 1/4 - 10px);
+    margin-bottom: 10px;
+  
+   }
+   .row{
+    flex-wrap: wrap;
+    }
+
+    /* controller */
+
+    .box-icon{
+        width: 30%;
+    }
+
+    .box-img{
+        width: 70%;
+    }
+
+
+    .music-player-controller{
+        width: 60%;
+    }
 }
 
 
 
 
-/* versione md */
-@media all and (max-width: 878px){}
-
-
-
-
 /* versione s */
-@media all and (max-width: 639px){}
+@media all and (max-width: 639px){
+    /* navbar */
+    .nav-bar{
+        width: 90%;
+        margin: 15px auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
 
+    .navbar-item {
+        flex-basis: calc(100% / 3 - 10px); 
+        margin: 5px 5px;
+        font-size: 10px;
+    }
+    
+    
+    
+    /* col-container */
+    .col{
+        width: calc(100% * 1/2 - 10px);
+        margin-bottom: 10px;
+    }
+     .row{
+      flex-wrap: wrap;
+    }
 
+    /* controller */
+    .music-player-controller{
+        width: 80%;
+    }
+
+    .box-icon{
+        display:block ;
+    }
+}
+    
 
 
 
 
 /* versione xs */
 @media all and (max-width: 552px){
+    /* sidebar */
     .sidebar{
-        width: 50px;
+        width:50px;
     }
 
-    .topbar{
+    li a,h1{
+        display: none;
+    }
+
+    .new-playlist-container{
+        display: none;
+    }
+
+    /* .sidebar-bottom-container h4,hr,a{
+        display: none;
+    } */
+    .sidebar-bottom-container a{
+        display: none;
+    }
+    .sidebar-bottom-container h4{
+        display: none;
+    }
+    .sidebar-bottom-container hr{
+        display: none;
+    }
+    ul{
+        text-align: center;
+    }
+
+    .sidebar-bottom-container{
+        text-align: center;
+    }
+    .box-profile{
+        margin: 5px auto;
+    }
+
+
+    
+
+
+
+    /* topbar */
+    .topbar-fixed{
         width: calc(100% - 50px);
+    }
+
+    /* main content */
+    .main-content{
+        width:calc(100vw - 50px); 
+    }
+
+    /* navbar */
+    .nav-bar{
+        width: 95%;
+        margin: 15px auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-item {
+        flex-basis: calc(100% / 4 - 10px); 
+        margin: 5px 5px;
+        font-size: 10px;
+    }
+
+    /* controller */
+    .box-icon{
+        width: 20%;
+    }
+
+    .box-img{
+        width: 80%;
+    }
+
+
+    .music-player-controller{
+        width: 100%;
     }
 }
 
